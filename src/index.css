@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  --color-on-background: #191c1e;
+  --color-tertiary-fixed-dim: #4edea3;
+  --color-on-surface: #191c1e;
+  --color-primary-container: #f97316;
+  --color-on-error: #ffffff;
+  --color-inverse-surface: #2d3133;
+  --color-surface-tint: #9d4300;
+  --color-secondary-fixed-dim: #bec6e0;
+  --color-outline-variant: #e0c0b1;
+  --color-on-primary-container: #582200;
+  --color-surface: #f7f9fb;
+  --color-tertiary-fixed: #6ffbbe;
+  --color-tertiary: #006c49;
+  --color-on-surface-variant: #584237;
+  --color-on-error-container: #93000a;
+  --color-inverse-primary: #ffb690;
+  --color-surface-container-high: #e6e8ea;
+  --color-on-secondary-container: #5c647a;
+  --color-on-secondary-fixed: #131b2e;
+  --color-inverse-on-surface: #eff1f3;
+  --color-surface-container: #eceef0;
+  --color-secondary: #565e74;
+  --color-tertiary-container: #00b07a;
+  --color-surface-container-low: #f2f4f6;
+  --color-surface-dim: #d8dadc;
+  --color-surface-container-highest: #e0e3e5;
+  --color-on-primary: #ffffff;
+  --color-primary-fixed-dim: #ffb690;
+  --color-on-primary-fixed: #341100;
+  --color-secondary-container: #dae2fd;
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-background: #f7f9fb;
+  --color-primary-fixed: #ffdbca;
+  --color-on-tertiary-container: #003b26;
+  --color-on-secondary-fixed-variant: #3f465c;
+  --color-on-primary-fixed-variant: #783200;
+  --color-outline: #8c7164;
+  --color-on-tertiary-fixed-variant: #005236;
+  --color-surface-variant: #e0e3e5;
+  --color-on-secondary: #ffffff;
+  --color-secondary-fixed: #dae2fd;
+  --color-primary: #9d4300;
+  --color-on-tertiary-fixed: #002113;
+  --color-on-tertiary: #ffffff;
+  --color-surface-bright: #f7f9fb;
+  --color-surface-container-lowest: #ffffff;
+
+  --spacing-gutter-desktop: 2rem;
+  --spacing-margin-tablet: 2rem;
+  --spacing-space-md: 1rem;
+  --spacing-gutter: 1rem;
+  --spacing-margin: 1rem;
+  --spacing-margin-desktop: 3rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-xl: 2rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-gutter-tablet: 1.5rem;
+  --spacing-space-xs: 0.25rem;
+
+  --font-headline-sm: "Plus Jakarta Sans", sans-serif;
+  --font-body-sm: "Inter", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-display-lg-mobile: "Plus Jakarta Sans", sans-serif;
+  --font-headline-lg: "Plus Jakarta Sans", sans-serif;
+  --font-label-lg: "Inter", sans-serif;
+  --font-headline-md: "Plus Jakarta Sans", sans-serif;
+  --font-display-lg: "Plus Jakarta Sans", sans-serif;
+  --font-label-md: "Inter", sans-serif;
+  --font-label-sm: "Inter", sans-serif;
+}
+
+@utility text-headline-sm { font-size: 16px; line-height: 24px; font-weight: 600; }
+@utility text-body-sm { font-size: 12px; line-height: 16px; font-weight: 400; }
+@utility text-body-md { font-size: 14px; line-height: 20px; font-weight: 400; }
+@utility text-body-lg { font-size: 16px; line-height: 24px; font-weight: 400; }
+@utility text-display-lg-mobile { font-size: 28px; line-height: 34px; letter-spacing: -0.02em; font-weight: 800; }
+@utility text-headline-lg { font-size: 24px; line-height: 32px; letter-spacing: -0.02em; font-weight: 700; }
+@utility text-label-lg { font-size: 14px; line-height: 20px; letter-spacing: 0.01em; font-weight: 600; }
+@utility text-headline-md { font-size: 20px; line-height: 28px; letter-spacing: -0.01em; font-weight: 600; }
+@utility text-display-lg { font-size: 36px; line-height: 44px; letter-spacing: -0.03em; font-weight: 800; }
+@utility text-label-md { font-size: 12px; line-height: 16px; letter-spacing: 0.02em; font-weight: 600; }
+@utility text-label-sm { font-size: 11px; line-height: 14px; letter-spacing: 0.04em; font-weight: 700; }
+
+@layer base {
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    overscroll-behavior-y: none;
+    min-height: max(884px, 100dvh);
+  }
+  .pb-safe {
+    padding-bottom: max(16px, env(safe-area-inset-bottom, 16px));
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.min-touch {
+  min-width: 44px;
+  min-height: 44px;
+}
